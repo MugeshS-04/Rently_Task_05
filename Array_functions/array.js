@@ -25,7 +25,7 @@ console.log(arr.toString())
 
 let word = "Hello !, How are you?"
 
-//.split() - to split the string according to the parameter and assign index
+//split() - to split the string according to the parameter and assign index
 console.log(word.split(" "))
 
 //splice() - modify the original array with starting index, and no of elements to delete and inserting new element
@@ -33,13 +33,26 @@ console.log(arr.splice(3, 5, "hello", "world"))
 
 console.log(arr)
 
-//slice() - used to trim the array with starting index or with both start and end
+//slice() - used to trim the original array with starting index or with both start and end
 console.log(arr.slice(2));
 
 //shift() - used to shift the array to one element left
 arr.shift()
 
+//unshift() - used to insert the element in the beginning
+arr.unshift(1, 3, 4)
+
 console.log(arr)
 
 //findIndex() - returns the index of the conditions passing first element from left to right
 console.log(arr.findIndex((ele) => ele == 10))
+
+//includes() - used to check if the element is present or not
+console.log(arr.includes(1))
+
+//join() - used to return the all elements in the array as one string concatenated
+console.log(arr.join())
+
+
+
+
