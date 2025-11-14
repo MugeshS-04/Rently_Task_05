@@ -22,10 +22,10 @@ console.log(word.toUpperCase())
 console.log(word.trim())
 
 //replace() - used to replace the first string matching the string
-console.log(word.replace("Hello", "Valthukal Valthukal"))
+console.log(word.replace("Hello", "."))
 
 //padEnd() - used to fill the string with space or give given character for the given no of space
-console.log(word.padEnd(25 * 9, "Valthukal "))
+console.log(word.padEnd(25, "."))
 
 //padStart() - same as padEnd, but in the beginning
-console.log(word.padStart(25 * 9, "Valthukal "))
+console.log(word.padStart(25, "."))
