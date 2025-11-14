@@ -1,5 +1,7 @@
 const { DateTime } = require('luxon')
 
+console.log(DateTime.now().toFormat('DDDD'))
+
 console.log("Current date and time");
 console.log(DateTime.now().toFormat('yyyy-MM-dd hh:mm:ss a'))
 
@@ -13,3 +15,4 @@ let pst = ind.setZone('America/Los_Angeles')
 console.log(ind.toFormat('hh:mm:ss a'))
 console.log(utc_.toFormat('hh:mm:ss a'))
 console.log(pst.toFormat('hh:mm:ss a'))
+
