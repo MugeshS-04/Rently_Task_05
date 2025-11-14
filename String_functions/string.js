@@ -20,3 +20,12 @@ console.log(word.toUpperCase())
 
 //trim() - used to trim the spaces from both front and beginning
 console.log(word.trim())
+
+//replace() - used to replace the first string matching the string
+console.log(word.replace("Hello", "Valthukal Valthukal"))
+
+//padEnd() - used to fill the string with space or give given character for the given no of space
+console.log(word.padEnd(25 * 9, "Valthukal "))
+
+//padStart() - same as padEnd, but in the beginning
+console.log(word.padStart(25 * 9, "Valthukal "))
