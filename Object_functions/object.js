@@ -53,5 +53,8 @@ console.log(Object.getPrototypeOf(intern) === employee)
 console.log(Object.values(intern))
 console.log(Object.keys(intern))
 
+//Included method in ObjectConstructor, can be accessed in all objects
+Object.prototype.greet = () => console.log("Hello!")
+employee.greet()
 
 
