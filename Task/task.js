@@ -27,6 +27,15 @@ let date_object = DateTime.fromFormat(time, "yyyy-MM-dd hh:mm:ss a", { zone : "A
 console.log(date_object.setZone("GMT").toFormat("yyyy-MM-dd hh:mm:ss a"))
 console.log(date_object.setZone("America/Los_Angeles").toFormat("yyyy-MM-dd hh:mm:ss a"))
 
+//PST TO UTC, IST
+let pac = moment.tz(time, "yyyy-MM-DD hh:mm:ss A", "America/Los_Angeles")
+console.log(pac.clone().tz("Asia/Kolkata").format("yyyy-MM-dd hh:mm:ss A"))
+console.log(pac.clone().tz("GMT").format("yyyy-MM-DD hh:mm:ss A"))
+
+let pac1 = DateTime.fromFormat(time, "yyyy-MM-dd hh:mm:ss a", {zone : "America/Los_Angeles"})
+console.log(pac1.setZone("Asia/Kolkata").toFormat("yyyy-MM-dd hh:mm:ss a"))
+console.log(pac1.setZone("GMT").toFormat("yyyy-MM-dd hh:mm:ss a"))
+
 //DST time
 let time1 = "2025-07-01 14:30:00" //Falls under DST -> UTC - 4
 let time2 = "2025-01-01 14:30:00" //No DST -> UTC - 5
