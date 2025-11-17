@@ -26,3 +26,13 @@ console.log(ind.clone().tz("America/Los_Angeles").format("yyy-MM-DD hh:mm:ss A")
 let date_object = DateTime.fromFormat(time, "yyyy-MM-dd hh:mm:ss a", { zone : "Asia/Kolkata"})
 console.log(date_object.setZone("GMT").toFormat("yyyy-MM-dd hh:mm:ss a"))
 console.log(date_object.setZone("America/Los_Angeles").toFormat("yyyy-MM-dd hh:mm:ss a"))
+
+//DST time
+let time1 = "2025-07-01 14:30:00" //Falls under DST -> UTC - 4
+let time2 = "2025-01-01 14:30:00" //No DST -> UTC - 5
+let Amer1 = DateTime.fromFormat(time1, "yyyy-MM-dd HH:mm:ss", {zone: "America/New_York"})
+let Amer2 = DateTime.fromFormat(time2, "yyyy-MM-dd HH:mm:ss", {zone: "America/New_York"})
+console.log(Amer1.toFormat("yyyy-MM-dd HH:mm:ss"))
+console.log(Amer1.setZone("UTC").toFormat("yyyy-MM-dd HH:mm:ss"))
+console.log(Amer2.toFormat("yyyy-MM-dd HH:mm:ss"))
+console.log(Amer2.setZone("UTC").toFormat("yyyy-MM-dd HH:mm:ss"))
