@@ -33,3 +33,25 @@ Object.seal(intern)
 intern.name1 = "ABC"
 console.log(intern.name1)
 console.log(delete intern.name1)
+
+//getOwnPropertiesNames() - used to get the properties of the object
+console.log(Object.getOwnPropertyNames(intern))
+
+//defineProperty() - used to define property with different parameters like writable, enumerable etc
+// Object.defineProperty(intern, "Batch", {
+//     value : "CSE",
+//     writable : false,
+//     enumerable : false,
+// })
+
+console.log(intern)
+
+//getPrototypeOf() - used to get the prototype of that object
+console.log(Object.getPrototypeOf(intern) === employee)
+
+//values() & keys() - used to get the keys and values
+console.log(Object.values(intern))
+console.log(Object.keys(intern))
+
+
+
